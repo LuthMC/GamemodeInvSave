@@ -6,7 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerGameModeChangeEvent;
 use pocketmine\player\Player;
-use pocketmine\inventory\Inventory;
+use pocketmine\item\Item;
 use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
@@ -62,10 +62,10 @@ class Main extends PluginBase implements Listener {
         $armorInventory->clearAll();
 
         foreach ($inventoryContents as $slot => $itemData) {
-            $playerInventory->setItem($slot, Inventory::jsonDeserialize($itemData));
+            $playerInventory->setItem($slot, Item::jsonDeserialize($itemData));
         }
         foreach ($armorContents as $slot => $itemData) {
-            $armorInventory->setItem($slot, Inventory::jsonDeserialize($itemData));
+            $armorInventory->setItem($slot, Item::jsonDeserialize($itemData));
         }
     }
 }
