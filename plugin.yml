@@ -1,0 +1,6 @@
+name: GamemodeInvSave
+main: Luthfi\GamemodeInvSave\Main
+version: 1.0.0
+api: 5.0.0
+author: Luthfi
+description: Saves inventory when changing gamemodes
